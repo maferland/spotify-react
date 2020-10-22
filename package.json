@@ -1,20 +1,20 @@
 {
-  "name": "template",
-  "version": "1.0.0",
-  "description": "🏛 This not the greatest repo in the world, this is a template",
+  "name": "spotify-react",
+  "version": "0.1.0",
+  "description": "🤿 React component to display Spotify recently played tracks ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maferland/template.git"
+    "url": "git+https://github.com/maferland/spotify-react.git"
   },
   "keywords": [],
   "author": "Marc-Antoine Ferland <maferland@hey.com> (https://maferland.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maferland/template/issues"
+    "url": "https://github.com/maferland/spotify-react/issues"
   },
-  "homepage": "https://github.com/maferland/template#readme"
+  "homepage": "https://github.com/maferland/spotify-react#readme"
 }

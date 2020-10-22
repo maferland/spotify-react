@@ -1,7 +1,7 @@
 <div align="center">
-<h1>🏛 @maferland/template</h1>
+<h1>🤿 @maferland/spotify-react</h1>
 
-<p>This not the greatest repo in the world, this is just a template </p>
+<p>React component to display Spotify recently played tracks </p>
 </div>
 
 ---
