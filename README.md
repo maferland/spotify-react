@@ -6,6 +6,9 @@
 
 ---
 
+[![NPM](https://img.shields.io/npm/v/@maferland/spotify-react.svg)](https://www.npmjs.com/package/@maferland/spotify-react)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
