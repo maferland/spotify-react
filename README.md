@@ -12,16 +12,44 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [How to use](#how-to-use)
+
+- [Installation](#installation)
+- [Usage](#usage)
 - [Author](#author)
 - [LICENSE](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## How to use
+## Installation
 
 ```
-// urr durr yarn dev
+npm install --save-dev @maferland/spotify-react
+// or
+yarn add @maferland/spotify-react
+```
+
+## Usage
+
+```js
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { RecentlyPlayedFeed } from '@maferland/spotify-reasct'
+
+function App() {
+  return (
+    <RecentlyPlayedFeed
+      userId='12166023407'
+      feedStyle={{
+        border: '1px solid red'
+      }}
+      itemStyle={{
+        border: '1px dashed blue'
+      }}
+    />
+  )
+}
+
+ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
 ## Author
