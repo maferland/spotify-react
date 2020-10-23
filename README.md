@@ -33,7 +33,7 @@ yarn add @maferland/spotify-react
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { RecentlyPlayedFeed } from '@maferland/spotify-reasct'
+import { RecentlyPlayedFeed } from '@maferland/spotify-react'
 
 function App() {
   return (
