@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { CSSProperties } from 'react'
-import { QueryCache, ReactQueryCacheProvider, useQuery } from 'react-query'
+import { QueryCache, ReactQueryCacheProvider } from 'react-query'
 import { PlaceholderTrack } from './placeholder-track'
 import { SpotifyTrack } from './spotify-track'
+import { useRecentlyPlayed } from './use-recently-played'
 
 const queryCache = new QueryCache()
 
@@ -13,54 +14,19 @@ interface Props {
   itemStyle?: CSSProperties
 }
 
-interface RecentActivity {
-  items: RecentActivityItem[]
-}
-
-export interface RecentActivityItem {
-  context: any
-  // eslint-disable-next-line camelcase
-  played_at: string
-  track: {
-    id: string
-    name: string
-    // eslint-disable-next-line camelcase
-    external_urls: { spotify: string }
-    album: {
-      images: {
-        height: number
-        width: number
-        url: string
-      }[]
-    }
-  }
-}
-
-const fetchRecentlyPlayed = (userId: string): Promise<RecentActivity> => {
-  return fetch(
-    `https://spotify.maferland.com/.netlify/functions/recently-played/${userId}`
-  ).then(
-    (res: any) => res.json(),
-    (error) => error
-  )
-}
-
 export const RecentlyPlayedFeed = ({
   userId = '',
   max = 10,
   feedStyle = {},
   itemStyle = {}
 }: Props) => {
-  const { isLoading, error, data } = useQuery<RecentActivity>(
-    `${userId}-recently-layed`,
-    () => fetchRecentlyPlayed(userId)
-  )
+  const { isLoading, error, data } = useRecentlyPlayed(userId)
 
   if (error) {
-    return <p>oops</p>
+    console.log(error)
   }
 
-  if (isLoading || !data) {
+  if (error || isLoading || !data) {
     return (
       <div style={feedStyle}>
         {Array(max)
