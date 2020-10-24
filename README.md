@@ -1,7 +1,7 @@
 <div align="center">
 <h1>🤿 @maferland/spotify-react</h1>
 
-<p>React component to display Spotify recently played tracks </p>
+<p>React component & hooks to retrieve Spotify recently played tracks </p>
 </div>
 
 ---
@@ -54,7 +54,8 @@ ReactDOM.render(<App />, document.getElementById('root'))
 You can also take advantage of the useRecentlyPlayed hooks:
 
 ```jsx
-import { RecentlyPlayedFeed, useRecentlyPlayed } from '@maferland/spotify-react'
+import { useRecentlyPlayed } from '@maferland/spotify-react'
+
 const { isLoading, error, data } = useRecentlyPlayed(12166023407)
 ```
 
