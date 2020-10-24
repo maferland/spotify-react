@@ -1,8 +1,8 @@
-import React, { CSSProperties } from 'react'
+import React from 'react'
 import { trackStyle } from './spotify-track'
 
 interface Props {
-  style?: CSSProperties
+  style?: React.CSSProperties
 }
 
 export const PlaceholderTrack = ({ style }: Props) => {

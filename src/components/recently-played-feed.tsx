@@ -1,5 +1,4 @@
-import * as React from 'react'
-import { CSSProperties } from 'react'
+import React from 'react'
 import { QueryCache, ReactQueryCacheProvider } from 'react-query'
 import { PlaceholderTrack } from './placeholder-track'
 import { SpotifyTrack } from './spotify-track'
@@ -10,8 +9,8 @@ const queryCache = new QueryCache()
 interface Props {
   userId: string
   max?: number
-  feedStyle?: CSSProperties
-  itemStyle?: CSSProperties
+  feedStyle?: React.CSSProperties
+  itemStyle?: React.CSSProperties
 }
 
 export const RecentlyPlayedFeed = ({

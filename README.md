@@ -12,7 +12,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Installation](#installation)
 - [Usage](#usage)
 - [Author](#author)
@@ -50,6 +49,13 @@ function App() {
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
+```
+
+You can also take advantage of the useRecentlyPlayed hooks:
+
+```jsx
+import { RecentlyPlayedFeed, useRecentlyPlayed } from '@maferland/spotify-react'
+const { isLoading, error, data } = useRecentlyPlayed(12166023407)
 ```
 
 ## Author

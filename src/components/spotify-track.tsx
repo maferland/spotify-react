@@ -1,12 +1,13 @@
-import React, { CSSProperties } from 'react'
-import { RecentActivityItem } from './recently-played-feed'
+import React from 'react'
+// eslint-disable-next-line no-unused-vars
+import { RecentActivityItem } from './use-recently-played'
 
 interface Props {
   item: RecentActivityItem
-  style?: CSSProperties
+  style?: React.CSSProperties
 }
 
-export const trackStyle: CSSProperties = {
+export const trackStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',

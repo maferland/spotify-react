@@ -23,7 +23,9 @@ export interface RecentActivityItem {
   }
 }
 
-const fetchRecentlyPlayed = (userId: string): Promise<RecentActivity> => {
+const fetchRecentlyPlayed = (
+  userId: string | number
+): Promise<RecentActivity> => {
   return fetch(
     `https://spotify.maferland.com/.netlify/functions/recently-played/${userId}`
   ).then(
@@ -32,7 +34,7 @@ const fetchRecentlyPlayed = (userId: string): Promise<RecentActivity> => {
   )
 }
 
-export const useRecentlyPlayed = (userId: string) => {
+export const useRecentlyPlayed = (userId: string | number) => {
   return useQuery<RecentActivity>(`${userId}-recently-layed`, () =>
     fetchRecentlyPlayed(userId)
   )
