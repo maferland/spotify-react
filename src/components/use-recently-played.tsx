@@ -24,18 +24,22 @@ export interface RecentActivityItem {
 }
 
 const fetchRecentlyPlayed = (
-  userId: string | number
+  userId: string | number,
+  limit: number = 10
 ): Promise<RecentActivity> => {
   return fetch(
-    `https://spotify.maferland.com/.netlify/functions/recently-played/${userId}`
+    `https://spotify.maferland.com/.netlify/functions/recently-played/${userId}?limit=${limit}`
   ).then(
     (res: any) => res.json(),
     (error) => error
   )
 }
 
-export const useRecentlyPlayed = (userId: string | number) => {
+export const useRecentlyPlayed = (
+  userId: string | number,
+  limit: number = 10
+) => {
   return useQuery<RecentActivity>(`${userId}-recently-layed`, () =>
-    fetchRecentlyPlayed(userId)
+    fetchRecentlyPlayed(userId, limit)
   )
 }

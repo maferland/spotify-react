@@ -1,6 +1,6 @@
 {
   "name": "@maferland/spotify-react",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "🤿 React component to display Spotify recently played tracks ",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
